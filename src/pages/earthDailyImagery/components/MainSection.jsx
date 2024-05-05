@@ -28,7 +28,7 @@ function MainSection(props) {
           style={{ color: "white" }}
         ></i>
       </Link>
-      <h1 className="text-center mt-16 font-orbitron text-3xl font-bold pb-8">
+      <h1 className="text-center pt-4 font-orbitron text-3xl font-bold pb-8">
         Daily Earth Images
       </h1>
       <div className="flex flex-col items-center gap-16 lg:flex-row w-2/3 lg:w-full lg:px-32 lg:gap-10 lg:h-screen lg:items-center justify-center  space-x-4  ">
