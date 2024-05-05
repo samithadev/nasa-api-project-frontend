@@ -19,7 +19,7 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/user/createUser",
+        "https://nasa-api-project-backend.onrender.com/user/createUser",
         {
           name,
           email,

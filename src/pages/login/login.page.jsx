@@ -17,10 +17,13 @@ function LoginPage() {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/user/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://nasa-api-project-backend.onrender.com/user/login",
+        {
+          email,
+          password,
+        }
+      );
       console.log(response);
 
       const { token } = response.data;
