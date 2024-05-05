@@ -40,8 +40,11 @@ function Register() {
     navigate("/");
   };
   return (
-    <div className="flex items-center justify-center w-screen h-screen">
-      <div className="border-solid border-4 p-20 ">
+    <div className="flex items-center justify-center w-screen h-screen ">
+      <div className="absolute w-full h-full z-[-1]">
+        <img src="/bg.jpg" alt="" className="w-full h-full object-cover" />
+      </div>
+      <div className="flex flex-col w-full items-center border-solid max-w-[350px] mx-8 py-6 rounded-xl border-4  bg-white">
         <div className=" py-4">
           <h1 className=" font-bold text-2xl flex items-center justify-center ">
             Register
@@ -55,7 +58,7 @@ function Register() {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className=" my-4 border-solid border-2 p-2"
+            className="w-full my-4 border-solid border-2 p-2"
             placeholder="Name"
             required
           />
@@ -67,7 +70,7 @@ function Register() {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className=" my-4 border-solid border-2 p-2"
+            className="w-full my-4 border-solid border-2 p-2"
             placeholder="Email Address"
             required
           />
@@ -79,7 +82,7 @@ function Register() {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className=" my-4 border-solid border-2 p-2"
+            className="w-full my-4 border-solid border-2 p-2"
             placeholder="Password"
             required
           />

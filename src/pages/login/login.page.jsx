@@ -46,20 +46,23 @@ function LoginPage() {
   };
 
   return (
-    <div className="flex items-center justify-center w-screen h-screen">
-      <div className="border-solid rounded-xl border-4 p-20 ">
+    <div className="flex items-center justify-center w-screen h-screen ">
+      <div className="absolute w-full h-full z-[-1]">
+        <img src="/bg.jpg" alt="" className="w-full h-full object-cover" />
+      </div>
+      <div className="flex flex-col items-center w-full max-w-[300px] mx-8 py-6 border-solid rounded-xl border-4  bg-white">
         <div className=" py-4">
-          <h1 className=" font-bold text-2xl flex items-center justify-center ">
+          <h1 className=" font-bold text-2xl flex items-center justify-center">
             Login
           </h1>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className=" w-full px-9">
           <label htmlFor="email">Email Address</label>
           <br />
           <input
             type="email"
             id="email"
-            className=" my-4 border-solid border-2 p-2"
+            className="w-full my-4 border-solid border-2 p-2"
             placeholder="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -70,7 +73,7 @@ function LoginPage() {
           <input
             type="password"
             id="password"
-            className=" my-4 border-solid border-2 p-2"
+            className="w-full my-4 border-solid border-2 p-2"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

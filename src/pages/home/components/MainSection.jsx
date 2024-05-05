@@ -74,30 +74,34 @@ function MainSection() {
 
       <div className=" h-screen w-screen flex flex-col items-center justify-center">
         <div className=" flex items-center gap-6 fixed top-10 right-10">
-          <Link>
-            <i
-              class="fa-regular fa-circle-user fa-2xl"
-              style={{ color: "white" }}
-            ></i>
-          </Link>
-          <div className=" text-white">Hello! {username}</div>
-          <button
-            className=" px-4 py-2 bg-white text-black font-bold rounded-xl hover:bg-slate-200 "
-            style={{ boxShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}
-            onClick={handleLogout}
-          >
-            Logout
-          </button>
+          <div className=" flex gap-6">
+            <Link>
+              <i
+                class="fa-regular fa-circle-user fa-2xl"
+                style={{ color: "white" }}
+              ></i>
+            </Link>
+            <div className=" text-white">Hello! {username}</div>
+            <button
+              className=" px-4 py-2 bg-white text-black font-bold rounded-xl hover:bg-slate-200 "
+              style={{ boxShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
+          </div>
         </div>
 
         <div className=" ">
-          <h1 className=" text-9xl text-white font-bold">Astronomy...</h1>
+          <h1 className="text-4xl md:text-6xl lg:text-9xl text-white font-bold">
+            Astronomy...
+          </h1>
         </div>
         <div className=" h-16 ">
           <h2 className="text-3xl mt-4 text-white">{text}</h2>
         </div>
 
-        <div className="flex items-center justify-center gap-32 pt-16">
+        <div className="flex flex-col gap-10 lg:flex-row items-center justify-center lg:gap-32 pt-16">
           <Link
             to={"/main/link01"}
             className="relative bg-white-500 text-white font-bold hover:bg-slate-400 hover:text-black px-8 py-4 rounded-lg overflow-hidden"

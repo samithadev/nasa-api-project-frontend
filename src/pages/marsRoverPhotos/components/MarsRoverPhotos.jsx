@@ -20,14 +20,18 @@ function MarsRoverPhotos(props) {
   const currentPhoto = data.photos[currentIndex];
 
   return (
-    <div className="flex flex-col items-center   bg-black text-white w-screen lg:h-screen py-9 lg:py-6">
+    <div className="flex flex-col items-center bg-black bg-opacity-50  text-white w-screen lg:h-screen ">
+      <div className="absolute w-full h-full z-[-1]">
+        <img src="/mars.jpg" alt="" className="w-full h-full object-cover" />
+      </div>
+
       <Link to={"/main/home"} className=" fixed top-6 left-6">
         <i
           className="fa-solid fa-circle-arrow-left fa-2xl"
           style={{ color: "white" }}
         ></i>
       </Link>
-      <h1 className="text-center font-orbitron text-3xl font-bold pb-8">
+      <h1 className="text-center mt-16 font-orbitron text-3xl font-bold pb-8">
         Mars Rover Photos
       </h1>
       <div className="flex flex-col lg:flex-row w-2/3 lg:w-full lg:px-32 lg:gap-10 lg:h-screen lg:items-center justify-center  space-x-4  ">
@@ -44,9 +48,12 @@ function MarsRoverPhotos(props) {
             ))}
           </Slider>
         </div>
-        <div className="w-full lg:w-1/2  ">
-          <div className="ml-4 p-4 shadow-lg rounded bg-gray-800">
-            <h2 className="text-lg font-semibold">Photo Details</h2>
+        <div className="w-full lg:w-1/2 mt-5 ">
+          <div className="p-4 lg:p-8 shadow-lg rounded bg-gray-800 bg-opacity-50">
+            <h2 className="text-lg font-semibold font-orbitron">
+              {" "}
+              <i className="fa-solid fa-circle-info"></i> Photo Details
+            </h2>
             <p>
               <strong>ID:</strong> {currentPhoto.id}
             </p>
@@ -59,7 +66,11 @@ function MarsRoverPhotos(props) {
             <p>
               <strong>Rover:</strong> {currentPhoto.rover.name}
             </p>
-            <h3 className="text-lg font-semibold mt-4">Rover Details</h3>
+
+            <h2 className=" mt-5 text-lg font-semibold font-orbitron">
+              {" "}
+              <i className="fa-solid fa-circle-info"></i> Rover Details
+            </h2>
             <p>
               <strong>Name:</strong> {currentPhoto.rover.name}
             </p>

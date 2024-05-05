@@ -18,17 +18,20 @@ function MainSection(props) {
   const currentPhoto = data[currentIndex];
 
   return (
-    <div className="flex flex-col items-center   bg-black text-white w-screen h-screen lg:h-screen py-9 lg:py-6">
+    <div className="flex flex-col items-center  text-white w-screen h-screen lg:h-screen  ">
+      <div className="absolute w-full h-full z-[-1]">
+        <img src="/bg.jpg" alt="" className="w-full h-full object-cover" />
+      </div>
       <Link to={"/main/home"} className=" fixed top-6 left-6">
         <i
           className="fa-solid fa-circle-arrow-left fa-2xl"
           style={{ color: "white" }}
         ></i>
       </Link>
-      <h1 className="text-center font-orbitron text-3xl font-bold pb-8">
+      <h1 className="text-center mt-16 font-orbitron text-3xl font-bold pb-8">
         Daily Earth Images
       </h1>
-      <div className="flex flex-col lg:flex-row w-2/3 lg:w-full lg:px-32 lg:gap-10 lg:h-screen lg:items-center justify-center  space-x-4  ">
+      <div className="flex flex-col items-center gap-16 lg:flex-row w-2/3 lg:w-full lg:px-32 lg:gap-10 lg:h-screen lg:items-center justify-center  space-x-4  ">
         <div className="w-full lg:w-1/2">
           <Slider {...settings}>
             {data &&
@@ -45,11 +48,13 @@ function MainSection(props) {
           </Slider>
         </div>
 
-        <div className="w-full lg:w-1/2  ">
-          <div className="ml-4 p-4 shadow-lg rounded bg-gray-800 bg-opacity-50">
-            <h2 className="text-lg font-semibold">Photo Details</h2>
+        <div className=" w-full lg:w-1/2 font-orbitron ">
+          <div className="lg:ml-4 p-4 shadow-lg rounded bg-gray-800 bg-opacity-50">
+            <h2 className="text-lg font-semibold mb-5">
+              <i className="fa-solid fa-circle-info"></i> Photo Details
+            </h2>
             <p>
-              <strong>Date:</strong> {currentPhoto.date}
+              <strong className="">Date:</strong> {currentPhoto.date}
             </p>
             <p>
               <strong>Latitude: {currentPhoto.centroid_coordinates.lat}</strong>

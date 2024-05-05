@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Main(props) {
   const { data } = props;
   return (
-    <div className=" w-full h-screen">
+    <div className=" w-screen h-screen ">
       <Link to={"/main/home"} className=" fixed top-6 left-6">
         <i
           className="fa-solid fa-circle-arrow-left fa-2xl"
@@ -12,7 +12,7 @@ function Main(props) {
         ></i>
       </Link>
       <img
-        className="w-full h-screen object-cover "
+        className=" absolute w-full h-full object-cover z-[-1]"
         src={data?.hdurl}
         alt={"bg-img"}
       />
